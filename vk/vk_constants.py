@@ -16,4 +16,8 @@ _public_sector = _config_parser["PUBLIC"]
 TAG = _public_sector["tag"]
 SYMBOLS_LIMIT = int(_public_sector["symbols_limit"])
 
-REPLIES = [text.strip() for text in _public_sector["replies"].split("|")]
+with open("simple_replies.txt", "r", encoding="utf-8") as f:
+    SIMPLE_REPLIES = list(filter(None, f.read().split("\n")))
+
+with open("replies_with_tag.txt", "r", encoding="utf-8") as f:
+    REPLIES_WITH_TAG = list(filter(None, f.read().split("\n")))

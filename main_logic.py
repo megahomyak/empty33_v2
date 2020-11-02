@@ -37,14 +37,23 @@ class MainLogic:
     async def handle_message(
             self, text: str, peer_id: int, from_id: int) -> None:
         if f"[club{vk_constants.GROUP_ID}|@{vk_constants.TAG}]" in text:
-            await self.vk_worker.reply(
-                peer_id, random.choice(
-                    [
-                        *vk_constants.REPLIES,
-                        f"Эй! Я тоже так могу! [id{from_id}|Тык!]"
-                    ]
+            reply_index = random.randint(
+                0,
+                (
+                    len(vk_constants.SIMPLE_REPLIES) - 1
+                    +
+                    len(vk_constants.REPLIES_WITH_TAG)
                 )
             )
+            if reply_index < len(vk_constants.SIMPLE_REPLIES):
+                reply = vk_constants.SIMPLE_REPLIES[reply_index]
+            else:
+                reply = vk_constants.REPLIES_WITH_TAG[
+                    reply_index - len(vk_constants.SIMPLE_REPLIES)
+                ].format(
+                    from_id=from_id
+                )
+            await self.vk_worker.reply(peer_id, reply)
 
     async def listen_for_messages(self) -> None:
         async for event in self.vk_worker.listen():
