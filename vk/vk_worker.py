@@ -20,7 +20,7 @@ class VKWorker(SimpleAVK):
             await self.call_method(
                 "messages.send",
                 {
-                    "text": part,
+                    "message": part,
                     "peer_id": peer_id,
                     "random_id": random.randint(-1_000_000, 1_000_000)
                 }
