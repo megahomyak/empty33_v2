@@ -217,4 +217,4 @@ cython_debug/
 .idea
 *.iml
 
-vk/vk_constants.ini
+vk/vk_secret_constants.ini
