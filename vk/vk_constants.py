@@ -2,7 +2,7 @@ from configparser import ConfigParser
 
 
 _config_parser = ConfigParser()
-_config_parser.read("vk/vk_constants.ini")
+_config_parser.read("vk/vk_constants.ini", encoding="utf-8")
 
 
 _secrets_sector = _config_parser["SECRETS"]
