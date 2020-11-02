@@ -14,6 +14,6 @@ Translation:
 * __Alexander Laizov__: like zhenya *(or Evgeny or Eugene)* dernovoy
 * __Eugene Krabs *(me)*__: who is zhenya dernovoy
 * __Alexander Laizov__: a bot.
-* __Eugene Krabs *(me)*__: uuuuuuuuuh!
+* __Eugene Krabs *(me)*__: uuuuuuuuu!
 
 So... here it is. Zhenya Dernovoy as a bot.
