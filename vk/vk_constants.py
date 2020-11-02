@@ -15,3 +15,5 @@ _public_sector = _config_parser["PUBLIC"]
 
 TAG = _public_sector["tag"]
 SYMBOLS_LIMIT = int(_public_sector["symbols_limit"])
+
+REPLIES = [text.strip() for text in _public_sector["replies"].split("|")]
