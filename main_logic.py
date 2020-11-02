@@ -64,7 +64,7 @@ class MainLogic:
 
 
 async def main():
-    async with aiohttp.ClientSession as session:
+    async with aiohttp.ClientSession() as session:
         main_logic = MainLogic(
             VKWorker(
                 session,
