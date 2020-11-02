@@ -27,11 +27,7 @@ class MainLogic:
                 f"Текст сообщения: \"{text}\". Ошибка: {exc_traceback_text}"
             )
             await self.vk_worker.reply(
-                peer_id,
-                (
-                    f"При обработке команды \"{text}\" произошла ошибка! Какая "
-                    f"нахер ошибка, я же человек..."
-                )
+                peer_id, vk_constants.CHAT_ERROR_MESSAGE.format(command=text)
             )
 
     async def handle_message(

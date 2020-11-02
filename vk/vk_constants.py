@@ -12,6 +12,7 @@ _public_sector = _config_parser["PUBLIC"]
 GROUP_ID = int(_secrets_sector["group_id"])
 TAG = _public_sector["tag"]
 SYMBOLS_LIMIT = int(_public_sector["symbols_limit"])
+CHAT_ERROR_MESSAGE = _public_sector["chat_error_message"]
 
 
 with open("simple_replies.txt", "r", encoding="utf-8") as f:
