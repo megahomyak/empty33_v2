@@ -216,3 +216,5 @@ cython_debug/
 # IntelliJ project files
 .idea
 *.iml
+
+vk/vk_constants.ini
