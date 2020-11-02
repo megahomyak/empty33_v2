@@ -1,5 +1,8 @@
 from configparser import ConfigParser
 
+# You need to create the file vk_secret_constants.ini in this folder (vk/) and
+# add a sector SECRETS with the key TOKEN and its value should be your public
+# page's VK token
 _secrets_parser = ConfigParser()
 _secrets_parser.read("vk/vk_secret_constants.ini", encoding="utf-8")
 
