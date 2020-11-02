@@ -36,7 +36,7 @@ class MainLogic:
 
     async def handle_message(
             self, text: str, peer_id: int, from_id: int) -> None:
-        if f"[id{vk_constants.GROUP_ID}|@{vk_constants.TAG}]" in text:
+        if f"[club{vk_constants.GROUP_ID}|@{vk_constants.TAG}]" in text:
             await self.vk_worker.reply(
                 peer_id, random.choice(
                     [
